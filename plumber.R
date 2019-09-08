@@ -13,10 +13,8 @@ function(msg = "") {
 #* @serializer contentType list(type = "text/xml")
 #* @post /xml
 function(res) {
-  browser()
   result <- c(file = "data_samples/001_data.xml")
   res$body <- result
-  # res$status_code <- 200L
   res$headers = c(
     "Access-Control-Allow-Origin: *",
     "Content-disposition: attachment; filename=result.xml"
